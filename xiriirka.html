@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nala Soo Xiriir - Kismayo Tourism</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Kismayo<span>Tourism</span></h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Hoyga</a></li>
+                    <li><a href="goobaha.html">Goobaha</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="taariikhda.html">Taariikhda</a></li>
+                    <li><a href="xiriirka.html" class="active">Xiriirka</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="glass-box">
+            <h2 class="page-title">Nala Soo Xiriir</h2>
+            
+            <div id="contactFeedback" class="feedback-message">
+                ✉️ Waad ku mahadsantahay farriintaada! Si guul leh ayaa loo diray, kooxdayada ayaa kugu soo jawaabi doonta e-mail dhowaan.
+            </div>
+
+            <form id="contactForm">
+                <div class="form-group">
+                    <label>E-mail-kaaga</label>
+                    <input type="email" placeholder="Geli email-kaaga rasmiga ah" required>
+                </div>
+                <div class="form-group">
+                    <label>Farriintaada</label>
+                    <textarea rows="5" placeholder="Halkan ku qor farriintaada..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Diri Farriinta</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('contactFeedback').style.display = 'block';
+            this.reset();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+
+    <footer><p>&copy; 2026 Kismayo Tourism Project. All rights reserved.</p></footer>
+</body>
+</html>
