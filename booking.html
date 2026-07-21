@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boos Qabsashada - Kismayo Tourism</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Kismayo<span>Tourism</span></h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Hoyga</a></li>
+                    <li><a href="goobaha.html">Goobaha</a></li>
+                    <li><a href="booking.html" class="active">Booking</a></li>
+                    <li><a href="taariikhda.html">Taariikhda</a></li>
+                    <li><a href="xiriirka.html">Xiriirka</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="glass-box">
+            <h2 class="page-title">Iska Diiri Safarkaaga Kismayo</h2>
+            
+            <div id="bookingFeedback" class="feedback-message">
+                🎉 Waad ku mahadsantahay! Booskaaga si guul leh ayaa loo qabtay. Shaqaalaheenna ayaa kalaga soo xiriiri doona WhatsApp dhowaan!
+            </div>
+
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label>Magacaaga oo Buuxa</label>
+                    <input type="text" placeholder="Geli magacaaga guud" required>
+                </div>
+                <div class="form-group">
+                    <label>Telefankaaga (WhatsApp)</label>
+                    <input type="text" placeholder="Tusaale: +252 61..." required>
+                </div>
+                <div class="form-group">
+                    <label>Dooro Xirmada Dalxiiska</label>
+                    <select required>
+                        <option value="">-- Dooro meel --</option>
+                        <option value="gobweyn">Gobweyn (Webiga & Badda)</option>
+                        <option value="bajuni">Jasiiradaha Bajuni</option>
+                        <option value="barcaleen">Caweyska Barcaleen</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Hada Boos Qabso</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('bookingFeedback').style.display = 'block';
+            this.reset();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+
+    <footer><p>&copy; 2026 Kismayo Tourism Project. All rights reserved.</p></footer>
+</body>
+</html>
